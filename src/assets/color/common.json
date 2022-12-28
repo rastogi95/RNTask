@@ -1,0 +1,13 @@
+{
+  "BLACK": "rgba(0,0,0,0.9)",
+  "WHITE": "#FFFFFF",
+  "DODGER_BLUE": "rgba(2, 194, 213, 1)",
+  "RED": "rgba(213, 2, 75, 1)",
+  "LIGHT_GREY": "#F7F7F7",
+  "BLACK_LIGHT": "#2B2B2B",
+  "GREY_DARK": "rgb(221,221,221)",
+  "DARK_BLACK": "#242737",
+  "GREY_LIGHT": "#24273780",
+  "GREY_LINE": "#EBEBEB",
+  "GREY_32": "#292D32",
+}

@@ -1,0 +1,17 @@
+{
+  "splash":{
+    "ifYouDoNotLike" : "If you want to be friends with someone",
+    "daubleTabTo" : "Double-tap to ",
+    "like" : "LIKE",
+    "dubleTabContinue" : "Double-tap to continue",
+  },
+  "splashSwip":{
+    "dontLikeSome" : "If you don't like someone",
+    "SwipeUpToto" : "Swipe up to ",
+    "pass" : "PASS",
+    "SwipeToContinue" : "Swipe-up to continue"
+  },
+  "age": "Age",
+  "away": "away",
+  "interest": "Interest#"
+}
