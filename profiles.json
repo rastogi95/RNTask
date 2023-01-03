@@ -21,12 +21,12 @@
         {
           "title":"it is a long established fact that a reader will be distracted by the readable content of a page",
         },
-        {
-          "title":"it is a long established fact that a reader will be distracted by the readable content of a page",
-        },
-        {
-          "title":"it is a long established fact that a reader will be distracted by the readable content of a page",
-        }
+        // {
+        //   "title":"it is a long established fact that a reader will be distracted by the readable content of a page",
+        // },
+        // {
+        //   "title":"it is a long established fact that a reader will be distracted by the readable content of a page",
+        // }
       ],
       "userMedia": [
         {
@@ -35,9 +35,9 @@
         {
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
         },
-        {
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-        },
+        // {
+        //   "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+        // },
       ]
     },
     {

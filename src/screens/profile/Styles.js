@@ -1,7 +1,8 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import {Color} from '../../assets/color/index.color';
 import {DP} from '../../utils/Dimen';
 import shadowView from '../../utils/utils';
+const height = Dimensions.get('window').height;
 
 export const Styles = StyleSheet.create({
   container: {
@@ -9,10 +10,11 @@ export const Styles = StyleSheet.create({
   },
   subContainer: {
     flex: 1,
-    marginHorizontal: DP._15,
+    margin: DP._15,
     backgroundColor: Color.LIGHT_GREY,
     borderRadius: 20,
     paddingTop: DP._15,
+    ...shadowView.shadowView.shadow,
   },
   margin10: {
     marginHorizontal: 10,
@@ -52,5 +54,22 @@ export const Styles = StyleSheet.create({
   flexRow: {
     flexDirection: 'row',
     justifyContent: 'center',
+  },
+  height100: {
+    height: 100,
+    width: 500,
+    // backgroundColor:'pink'
+  },
+  positionView: {
+    height: 200,
+    width: 400,
+    position: 'absolute',
+    backgroundColor: 'red',
+    bottom: 70,
+  },
+  height500: {
+    height: height,
+    width: 500,
+    // backgroundColor:'blue'
   },
 });

@@ -11,7 +11,7 @@ const shadowView = {
   },
 };
 
-export function checkEven(i) {
+export function checkOddEven(i) {
   if (i % 2 == 0) {
     return 0;
   } else {
@@ -19,4 +19,4 @@ export function checkEven(i) {
   }
 }
 
-export default {shadowView, checkEven};
+export default {shadowView, checkOddEven};
