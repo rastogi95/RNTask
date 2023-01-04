@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, ScrollView, BackHandler, Platform} from 'react-native';
+import {View, Text, ScrollView, BackHandler, Platform, Dimensions} from 'react-native';
 import profiles from '../../../profiles.json';
 import {ImageConst} from '../../assets/images/ImageConst/index.image';
 import Button from '../../components/Button';
@@ -94,13 +94,15 @@ const ProfileScreen = ({route, navigation}) => {
           if (isCloseToBottom(nativeEvent)) {
             enableSomeButton();
           }
-          let checkPlatform = 650;
+          let deviceScreenHeight = Dimensions.get('window').height;
+          let checkPlatform = deviceScreenHeight - deviceScreenHeight * 0.08; //650;
           let tempHeigh = enable - checkPlatform;
           console.log(
             'nativeEvent.contentOffset.y',
             nativeEvent.contentOffset.y,
             enable,
             tempHeigh,
+            checkPlatform,
           );
           if (nativeEvent.contentOffset.y > tempHeigh && status === true) {
             switchView();
