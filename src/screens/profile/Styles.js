@@ -72,4 +72,21 @@ export const Styles = StyleSheet.create({
     width: 500,
     // backgroundColor:'blue'
   },
+  fredPosition: {
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+    backgroundColor: 'rgba(52, 52, 52, 0.1)',
+    top: '1.5%',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+  },
+  iconHeight: {
+    height: DP._70,
+    width: DP._70,
+  },
 });
