@@ -89,4 +89,8 @@ export const Styles = StyleSheet.create({
     height: DP._70,
     width: DP._70,
   },
+  modal: {
+    justifyContent: 'center',
+    paddingHorizontal: DP._40,
+  },
 });

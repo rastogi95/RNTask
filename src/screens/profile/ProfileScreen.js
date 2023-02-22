@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState,useRef} from 'react';
 import {
   View,
   Text,
@@ -7,12 +7,16 @@ import {
   Dimensions,
   Image,
   TouchableWithoutFeedback,
+  TouchableOpacity,
+  Animated,
+  PanResponder
 } from 'react-native';
 import profiles from '../../../profiles.json';
 import {ImageConst} from '../../assets/images/ImageConst/index.image';
 import Button from '../../components/Button';
 import FadeInView from '../../components/ImageAniation';
 import InterestCart from '../../components/InterestCart';
+import CustomModal from '../../components/Modal';
 import ProfileCart from '../../components/ProfileCart';
 import SafeAreaHOC from '../../components/SafeAreaHOC';
 import {checkOddEven} from '../../utils/utils';
@@ -36,15 +40,25 @@ const ProfileScreen = ({route, navigation}) => {
   const [stateful, setStateful] = useState(false);
   const [enable, setEnable] = useState('');
   const [like, setLike] = useState(false);
+  const [visible, setVisible] = useState(false);
   const index = route.params?.index ?? 0;
   let status = true;
-
+  const fadeAnim = useRef(new Animated.Value(0)).current;
   const switchView = () => {
     console.log('value===', index + 1, profiles.data.length);
     if (index + 1 <= profiles.data.length - 1) {
       navigation.push('profile', {index: index + 1});
     }
   };
+
+  useEffect(() => {
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 10000,
+      useNativeDriver: true,
+    }).start();
+  }, [fadeAnim]);
+
 
   useEffect(() => {
     const backAction = () => {
@@ -102,6 +116,10 @@ const ProfileScreen = ({route, navigation}) => {
       setLike(false);
     }, 1100);
   };
+
+  function closeMessageAlert(newVal) {
+    setVisible(newVal);
+  }
 
   return (
     <SafeAreaHOC style={Styles.container}>
@@ -190,6 +208,13 @@ const ProfileScreen = ({route, navigation}) => {
           </FadeInView>
         </View>
       )}
+      <CustomModal
+        visible={visible}
+        setVisible={closeMessageAlert}
+        style={Styles.modal}
+        disableBackdro>
+        <View style={{height: 400, width: '98%', borderRadius: 22,backgroundColor:'white'}}></View>
+      </CustomModal>
     </SafeAreaHOC>
   );
 };
